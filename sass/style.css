@@ -1,0 +1,60 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  font-family: "roboto";
+  max-width: 760px;
+  font-style: normal;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+main .position {
+  background-color: #EAEAEA;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+main .menu {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+main .menu h1 {
+  font-weight: 700;
+  width: 50%;
+  text-align: center;
+  font-size: 24px;
+}
+main .menu p {
+  font-weight: 300;
+  font-size: 18px;
+  width: 55%;
+  text-align: center;
+}
+main .menu h2 {
+  color: white;
+  border-radius: 25px 25px 25px 25px;
+  padding: 15px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  font-size: 16px;
+  font-weight: 500;
+}/*# sourceMappingURL=style.css.map */
