@@ -1,0 +1,58 @@
+
+%btn{ font-weight: 500;
+    font-size: 16px;
+    width: 85%;
+    height: 30%;
+    border: none;
+    border-radius: 20px;
+    padding:20px ;
+    background-color: $backgroud-gris-clair;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 1px 10px 14px gainsboro ;}
+    %h2{
+        position: absolute;
+      left: -1px; 
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+       border-radius: 50px;
+       background-color: $violet-foncer;
+       color: #ffff;
+    }
+.button{
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+.button1{
+   @extend %btn;
+   h2{
+      @extend %h2;    
+    }
+    i{
+        color:$color-icon;
+    }
+   }
+.button2{
+    @extend %btn;
+    h2{
+        @extend %h2;
+    }
+    i{
+        color:$color-icon;
+    }
+   }
+   .button3{
+    @extend %btn;
+    h2{@extend %h2;}
+    i{
+        color: $violet-foncer;
+    }
+   }}

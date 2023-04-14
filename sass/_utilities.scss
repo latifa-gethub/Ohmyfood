@@ -1,0 +1,28 @@
+*{margin: 0px;
+    padding: 0px;}
+:root{font-family: "roboto";
+           min-width: 320px;
+            font-style: normal;}
+h3{
+    font-size:18px;
+    font-weight: 700;
+    font-style: normal;
+}
+h2{
+    margin-left: 25px;
+    font-weight: 700;
+    font-size: 24px;
+}
+p{
+     font-weight: 300;
+    font-size: 18px;        
+}
+
+@function text-color($color){
+    @if(lightness($color)>50){
+        @return $vert-foncer;
+     }
+     @else{
+        @return #fff;
+     }
+ }
