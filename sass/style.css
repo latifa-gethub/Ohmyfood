@@ -12,11 +12,10 @@
 h3 {
   font-size: 18px;
   font-weight: 700;
-  font-style: normal;
 }
 
 h2 {
-  margin-left: 25px;
+  padding-left: 25px;
   font-weight: 700;
   font-size: 24px;
 }
@@ -24,6 +23,18 @@ h2 {
 p {
   font-weight: 300;
   font-size: 18px;
+}
+
+.cartes .tous-les-cartes, .cartes, .section-fonction ol, .section-fonction {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.section-fonction ol li .chiffre, .section-fonction ol li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
@@ -34,17 +45,56 @@ header {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
+footer {
+  background-color: #101010;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: white;
+  padding-left: 30px;
+}
+footer h1 {
+  font-family: "Shrikhand";
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 500px;
+}
+footer h4 {
+  font-weight: 500;
+  font-size: 16px;
+  margin-left: 10px;
+}
+footer p {
+  font-weight: 300;
+  font-size: 16px;
+}
+footer div {
+  display: flex;
+}
+footer article {
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .position {
   background-color: #EAEAEA;
-  font-size: 16px;
-  font-weight: 500;
-  font-style: normal;
   width: 100%;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
+}
+.position .champ-position {
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #EAEAEA;
+  border: none;
+  color: black;
 }
 
 .menu {
@@ -76,105 +126,123 @@ header {
   box-shadow: 0px 4px 10px 0px #000000;
 }
 
-.button .button3, .button .button2, .button .button1 {
+.section-fonction {
+  height: 380px;
+}
+.section-fonction ol {
+  height: 70%;
+  width: 90%;
+  margin-left: 30px;
+  gap: 20px;
+}
+.section-fonction ol li {
+  position: relative;
   font-weight: 500;
   font-size: 16px;
-  width: 85%;
+  width: 100%;
   height: 30%;
-  border: none;
   border-radius: 20px;
-  padding: 20px;
   background-color: #f7f7f7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
+  gap: 10px;
   box-shadow: 1px 10px 14px gainsboro;
 }
-
-.button .button3 h2, .button .button2 h2, .button .button1 h2 {
+.section-fonction ol li .chiffre {
   position: absolute;
-  left: -1px;
+  left: -1%;
   font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 24px;
   height: 24px;
   border-radius: 50px;
   background-color: #9356DC;
   color: white;
 }
-
-.button {
-  height: 70%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-.button .button1 i {
-  color: #7e7e7e;
-}
-.button .button2 i {
-  color: #7e7e7e;
-}
-.button .button3 i {
+.section-fonction ol i {
   color: #9356DC;
 }
-
-main .main-fonction {
-  height: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+@media screen and (min-width: 780px) {
+  .section-fonction {
+    height: 225px;
+  }
+  .section-fonction ol {
+    display: flex;
+    flex-direction: row;
+  }
 }
-main .cartes {
+
+.cartes {
   background-color: #f7f7f7;
   height: 1150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
 }
-main .cartes .tous-les-cartes {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.cartes .tous-les-cartes {
+  width: 90%;
+  margin-left: 30px;
   gap: 15px;
 }
-main .cartes .tous-les-cartes .cartes-cadre, main .cartes .tous-les-cartes .carte-cadre2 {
-  width: 90%;
+.cartes .tous-les-cartes .lien {
+  width: 100%;
+  height: auto;
+  text-decoration: none;
+  color: black;
+}
+.cartes .tous-les-cartes .cartes-cadre {
+  position: relative;
   height: 250px;
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(80, 52, 52, 0.1019607843);
 }
-main .cartes .tous-les-cartes .cartes-cadre img, main .cartes .tous-les-cartes .carte-cadre2 img {
+.cartes .tous-les-cartes .cartes-cadre img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 70%;
   border-radius: 15px 15px 0px 0px;
 }
-main .cartes .tous-les-cartes .cartes-cadre-info {
+.cartes .tous-les-cartes .cartes-cadre-info {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 25%;
   padding-left: 15px;
 }
-main .cartes .tous-les-cartes .cartes-cadre i, main .cartes .tous-les-cartes .carte-cadre2 i {
-  box-sizing: border-box;
-  width: 10%;
+.cartes .tous-les-cartes .cartes-cadre i {
+  position: absolute;
+  left: 90%;
 }
-main .cartes .tous-les-cartes .carte-cadre2 i {
-  color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+.cartes .tous-les-cartes .cartes-cadre .fa-solid.fa-heart {
+  color: transparent;
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
 }
-main .cartes h4 {
+.cartes .tous-les-cartes .cartes-cadre .fa-solid.fa-heart:hover {
+  opacity: 1;
+}
+.cartes h4 {
   font-weight: 500;
   font-size: 14px;
+  padding: 3px 3px;
   position: absolute;
-  left: 70%;
-  color: #008766;
+  left: 80%;
+  top: 5%;
+  color: text-color(#99E2D0);
   background-color: #99E2D0;
+  border-radius: 1px;
+}
+@media screen and (min-width: 780px) {
+  .cartes {
+    height: 600px;
+  }
+  .cartes .tous-les-cartes {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .cartes .tous-les-cartes .lien {
+    width: 45%;
+  }
 }/*# sourceMappingURL=style.css.map */

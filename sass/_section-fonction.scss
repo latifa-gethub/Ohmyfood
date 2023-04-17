@@ -1,0 +1,46 @@
+.section-fonction{ 
+    height: 380px;                 
+     @extend %flexcolumn;
+    ol{  
+       height: 70%;
+       width: 90%;
+        @extend %flexcolumn;
+       margin-left: 30px;
+       gap: 20px;
+       li{ position: relative;
+           font-weight: 500;
+           font-size: 16px;
+           width: 100%;
+           height: 30%;    
+           border-radius: 20px;                        
+           background-color: $backgroud-gris-clair;
+            @extend %rowcenter;
+           gap: 10px;
+           box-shadow: 1px 10px 14px gainsboro ;
+           .chiffre{
+               position: absolute;
+             left: -1%;
+             font-size: 18px;
+              @extend %rowcenter;
+             width: 24px;
+             height: 24px;
+              border-radius: 50px;
+              background-color: $violet-foncer;
+              color: #ffff;
+           } 
+       }
+       i{
+           color: $violet-foncer;
+           
+       }
+       
+     } 
+     @media screen and (min-width: 780px){
+       height: 225px;
+     ol{
+       display: flex;
+       flex-direction: row;
+     }
+
+   }           
+}
