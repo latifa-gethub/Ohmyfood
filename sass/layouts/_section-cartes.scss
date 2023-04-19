@@ -25,16 +25,16 @@
                     border-radius: 15px 15px 0px 0px;
                 }
                 &-info{ 
-                    position: relative;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
+                    @extend %rowbetween;
+                    position: relative;                   
                     height: 25%;                 
                     padding-left: 15px;
+                    padding-top: 5px;
                 }
                 i{  
                      position: absolute;
-                     left: 90%;                     
+                     left: 90%;
+                                       
                 }   
                 .fa-solid.fa-heart{                    
                     color: transparent;
@@ -42,8 +42,10 @@
                     background-clip:text;
                     -webkit-background-clip: text;
                     opacity: 0;
+                    transition: opacity 1s;
                      &:hover{
                         opacity: 1;
+                       transform: scale(1.13);
                      }  
                 } 
             }

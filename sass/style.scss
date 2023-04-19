@@ -1,13 +1,13 @@
-     @import "utilities";
-     @import "variables";
+     @import "abstracts/utilities";
+     @import "abstracts/variables";
      @import "layouts/header";
      @import "layouts/footer";
-     @import "position";
-     @import "menu";
-     @import "boutons";
-     @import "section-fonction";
-     @import "section-cartes";
-      
+     @import "layouts/position";
+     @import "layouts/section-menu";       
+     @import "layouts/section-fonction";
+     @import "layouts/section-cartes";
+     @import "pages/restaurant"; 
+     @import "abstracts/mixin";
       
  
 

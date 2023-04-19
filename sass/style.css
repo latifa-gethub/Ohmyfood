@@ -31,18 +31,41 @@ p {
   justify-content: space-around;
 }
 
-.section-fonction ol li .chiffre, .section-fonction ol li {
+body .main-palettes .button, .section-fonction ol li .chiffre, .section-fonction ol li {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+body .main-palettes .titre-palette, .cartes .tous-les-cartes .cartes-cadre-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-solid.fa-heart {
+  color: transparent;
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: opacity 2s;
+}
+.fa-solid.fa-heart:hover {
+  opacity: 1;
+  transform: scale(1.13);
+}
+
 header {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+header h1 {
+  font-family: "Shrikhand";
+  font-style: italic;
+  font-weight: 800;
+  font-size: 40px;
 }
 
 footer {
@@ -58,11 +81,11 @@ footer h1 {
   font-family: "Shrikhand";
   font-style: italic;
   font-size: 18px;
-  font-weight: 500px;
+  font-weight: 400px;
 }
 footer h4 {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
   margin-left: 10px;
 }
 footer p {
@@ -117,6 +140,8 @@ footer article {
   text-align: center;
 }
 .menu h3 {
+  width: 45%;
+  text-align: center;
   color: white;
   border-radius: 25px 25px 25px 25px;
   padding: 15px;
@@ -200,11 +225,9 @@ footer article {
 }
 .cartes .tous-les-cartes .cartes-cadre-info {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 25%;
   padding-left: 15px;
+  padding-top: 5px;
 }
 .cartes .tous-les-cartes .cartes-cadre i {
   position: absolute;
@@ -216,9 +239,11 @@ footer article {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
+  transition: opacity 1s;
 }
 .cartes .tous-les-cartes .cartes-cadre .fa-solid.fa-heart:hover {
   opacity: 1;
+  transform: scale(1.13);
 }
 .cartes h4 {
   font-weight: 500;
@@ -244,5 +269,101 @@ footer article {
   }
   .cartes .tous-les-cartes .lien {
     width: 45%;
+  }
+}
+
+body img {
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+body .main-palettes {
+  margin-top: -10%;
+  padding-left: 20px;
+  border-radius: 35px 35px 0px 0px;
+  background-color: #f7f7f7;
+  position: relative;
+  height: 190vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body .main-palettes .titre-palette h2 {
+  position: relative;
+  font-family: "Shrikhand";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 25px;
+  margin-left: -20px;
+}
+body .main-palettes .titre-palette i {
+  position: absolute;
+  left: 90%;
+}
+body .main-palettes .section-menu h3 {
+  width: 8%;
+  font-weight: 300;
+  font-size: 16px;
+  border-bottom: solid 2px #99E2D0;
+}
+body .main-palettes .section-menu .tous-repas {
+  margin-top: 10px;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body .main-palettes .section-menu .tous-repas .repas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px;
+  background-color: white;
+  width: 95%;
+  height: 25%;
+  padding: 10px;
+}
+body .main-palettes .section-menu .tous-repas .repas h4 {
+  font-weight: 500;
+  font-size: 18px;
+}
+body .main-palettes .section-menu .tous-repas .repas p {
+  font-weight: 300;
+  font-size: 15px;
+}
+body .main-palettes .button {
+  height: 20vh;
+}
+body .main-palettes .button h5 {
+  text-align: center;
+  color: white;
+  width: 45%;
+  border-radius: 25px 25px 25px 25px;
+  padding: 15px;
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0px 4px 10px 0px #000000;
+}
+@media screen and (min-width: 780px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body i {
+    position: relative;
+  }
+  body main {
+    width: 80%;
+  }
+  body main .titre-palette {
+    display: flex;
+    justify-content: center;
+  }
+  body footer {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

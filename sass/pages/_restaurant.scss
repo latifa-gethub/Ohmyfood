@@ -1,0 +1,95 @@
+@import "../abstracts/mixin.scss";
+body{
+    
+img{
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+} 
+.main-palettes{
+    margin-top: -10%;
+    padding-left: 20px;
+    border-radius:35px 35px 0px 0px;
+    background-color:$backgroud-gris-clair;
+   position: relative;
+   height: 190vh;    
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   .titre-palette{
+    @extend %rowbetween;
+    h2{   position: relative;      
+        font-family: 'Shrikhand';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 25px;
+        margin-left: -20px;     
+    }
+    i{  
+        @include heart-p;
+    }}
+    .section-menu{        
+                 
+          h3{            
+            width: 8%;
+            font-weight: 300;
+            font-size: 16px;
+            border-bottom: solid 2px $vert-clair;
+           }        
+    
+        .tous-repas{
+            margin-top: 10px;
+            width: 95%;
+            display: flex; 
+            flex-direction: column;
+            gap: 10px;
+        .repas{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 25px;
+            background-color: white;
+            width: 95%;
+           height: 25%;
+           padding: 10px;
+         h4{
+            font-weight: 500;
+            font-size: 18px;
+            }
+         p{
+            font-weight: 300;
+            font-size: 15px;
+         }
+        }
+        }        
+    }
+    .button{
+        height: 20vh;
+        @extend %rowcenter;
+      h5{
+         @include button;
+        }
+    }
+      
+}
+@media screen and (min-width: 780px){
+    i{
+        position: relative;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        main{
+            width: 80%;
+            .titre-palette{
+                display: flex;
+                justify-content: center;
+                
+            } 
+        }
+        footer{
+            width: 100%;
+        } 
+    }    
+}
