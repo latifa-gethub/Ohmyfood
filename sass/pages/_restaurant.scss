@@ -1,13 +1,40 @@
 @import "../abstracts/mixin.scss";
-body{
-    
+@import "../layouts/header.scss";
+
+
+@keyframes ani-scale{
+    0%{
+     transform:translateY(50%);
+     opacity: 0;
+    }
+    100%{
+     transform: translateY(0);
+     opacity: 1;
+    }
+}
+
+.header-flech{
+    i{
+        font-size: larger;
+        color:#000;
+    } 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     width: 60%;
+     margin-left: 20px;
+     
+  }
 img{
     position: relative;
     object-fit: cover;
     width: 100%;
     height: 250px;
 } 
+.tous-main{
+    
 .main-palettes{
+    text-align: center;
     margin-top: -10%;
     padding-left: 20px;
     border-radius:35px 35px 0px 0px;
@@ -28,40 +55,98 @@ img{
     }
     i{  
         @include heart-p;
-    }}
+    } 
+  }
     .section-menu{        
-                 
+            width: 98%;     
           h3{            
-            width: 8%;
+            width: 5%;
             font-weight: 300;
             font-size: 16px;
             border-bottom: solid 2px $vert-clair;
            }        
     
         .tous-repas{
-            margin-top: 10px;
-            width: 95%;
+            width: 100%;
+            margin-top: 10px;            
             display: flex; 
             flex-direction: column;
+            align-items: center;
             gap: 10px;
+            
         .repas{
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-radius: 25px;
             background-color: white;
-            width: 95%;
+            width: 98%;
            height: 25%;
-           padding: 10px;
-         h4{
+            overflow: hidden;            
+            box-shadow: 2px 2px 2px $bakhgroud-gris-foncer;
+            animation: ani-scale 1s;
+            animation-fill-mode: backwards;
+            @for $i from 1 through 3 {
+                 &:nth-child(#{$i}) {
+                   animation-delay: $i*100ms;
+                }
+            }
+          h4{
             font-weight: 500;
             font-size: 18px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow:ellipsis;
             }
-         p{
+          p{
             font-weight: 300;
             font-size: 15px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow:ellipsis;
+           }
+          .repas-proposer{
+            padding: 10px 0px 10px 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow:ellipsis;
+            text-align: initial;
+           }
+         .price-cheks{
+             display: flex;
+             align-items: center;
+             gap: 15px;
+             .price{
+             font-weight: 700;
+             padding-top: 15px;
+            }
+            .cheks{
+                width: 10px;
+              background-color:$vert-clair;
+              border-radius: 0px 25px 25px 0px;
+              padding: 25px;
+              margin-right: -4rem;
+              transition: margin-right 1s;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+             i{
+                background-color: white;
+                color:$vert-clair;
+                border-radius: 50px;
+             }
+            
          }
         }
+        &:hover{ 
+               cursor: pointer;  
+            .cheks{ margin-right: 0px;}
+             
+            i{
+              animation:rotation 1s ease-in-out;
+             } 
+            }   
+    }
         }        
     }
     .button{
@@ -73,23 +158,37 @@ img{
     }
       
 }
-@media screen and (min-width: 780px){
-    i{
-        position: relative;
-    }
+
+}
+@media screen and (min-width: 780px){         
+    .tous-main{
     display: flex;
     flex-direction: column;
     align-items: center;
-        main{
-            width: 80%;
-            .titre-palette{
-                display: flex;
-                justify-content: center;
-                
-            } 
+       .main-palettes{
+           width: 80%;
+           .titre-palette{
+               display: flex;
+               justify-content: center;
+           }
+           .section-menu{
+               width: 80%;
+               margin-left: 50px;
+              
+          }                     
+       } 
+    }
+    footer{        
+        display:flex;
+        flex-direction: row-reverse;
+        align-items: end;
+        padding-bottom: 20px;
+        article{
+            width: 75%;
+            display: flex;
+            flex-direction: row;
+            align-items: end;
         }
-        footer{
-            width: 100%;
-        } 
-    }    
-}
+    }                
+}            
+       

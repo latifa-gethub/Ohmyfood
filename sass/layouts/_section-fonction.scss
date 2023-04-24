@@ -2,15 +2,14 @@
     height: 380px;                 
      @extend %flexcolumn;
     ol{  
-       height: 70%;
-       width: 90%;
+       height: 70%;        
         @extend %flexcolumn;
        margin-left: 30px;
-       gap: 20px;
+       gap: 15px;
        li{ position: relative;
            font-weight: 500;
            font-size: 16px;
-           width: 100%;
+           width: 90%;
            height: 30%;    
            border-radius: 20px;                        
            background-color: $backgroud-gris-clair;
@@ -28,10 +27,19 @@
               background-color: $violet-foncer;
               color: #ffff;
            } 
+           i{
+            color:$color-icon;
+            &:hover{
+              color:$violet-foncer;
+            }
+             
+         }
        }
-       i{
+       
+       .fonction3{
+        i{
            color: $violet-foncer;
-           
+        }
        }
        
      } 
@@ -40,6 +48,9 @@
      ol{
        display: flex;
        flex-direction: row;
+       li{
+        width: 34%;
+       }
      }
 
    }           

@@ -1,3 +1,4 @@
+@import"../abstracts/variables";
 *{margin: 0px;
     padding: 0px;}
 :root{font-family: "roboto";
@@ -45,4 +46,59 @@ p{
        opacity: 1;
       transform: scale(1.13);
     }  
+ }
+ //keyframe
+ @keyframes rotation{
+   0%{
+    transform: rotate(280deg);
+   }
+   100%{
+transform: rotate(0);
+   }
+ }
+ //loaders
+ .loader{
+   background-color: #fff;
+   opacity: 0.9;
+    
+   height: 100vh;
+   position: fixed;   
+   inset: 0px;
+   text-align: center;
+   line-height: 100vh;
+   z-index: 1;
+   animation: disparaitre 2s 3s;
+   animation-fill-mode:forwards;
+     //loader quart de cercle
+   .loader-quart{
+      position: relative;
+     height: 50px;
+     width: 50px;
+     border-radius: 50px;
+     border: 6px solid rgba($color: #dad6d6, $alpha: 1.0);
+     display: inline-block; 
+     vertical-align: middle;
+      
+   }
+   .loader-quart::after{
+      content: "";
+      position: absolute;
+      inset: -6px;
+      height: 50px;
+     width: 50px;
+     border-radius: 50px;
+     
+     border: 6px solid transparent;
+     border-top-color: $violet-foncer;
+     animation: ani-loader 1s infinite linear; 
+   }
+ }
+ @keyframes ani-loader{
+   0%{transform: rotate(0);}
+   100%{transform: rotate(360deg);}
+ }
+ @keyframes disparaitre{
+   to{
+      transform: scale(0);
+   }
  }
