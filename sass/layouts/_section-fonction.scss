@@ -18,40 +18,31 @@
            box-shadow: 1px 10px 14px gainsboro ;
            .chiffre{
                position: absolute;
-             left: -1%;
-             font-size: 18px;
-              @extend %rowcenter;
-             width: 24px;
-             height: 24px;
-              border-radius: 50px;
-              background-color: $violet-foncer;
-              color: #ffff;
-           } 
-           i{
-            color:$color-icon;
-            &:hover{
+               left: -1%;
+               font-size: 18px;
+               @extend %rowcenter;
+               width: 24px;
+               height: 24px;
+               border-radius: 50px;
+               background-color: $violet-foncer;
+                color: #ffff;
+              } 
+             i{
+              color:$color-icon;
+              font-size: larger;
+              &:hover{
               color:$violet-foncer;
-            }
-             
+             }             
          }
-       }
-       
+           &:hover{
+            transform: scale(1.02);
+            opacity: 0.9;
+           }
+       }       
        .fonction3{
         i{
            color: $violet-foncer;
         }
-       }
-       
-     } 
-     @media screen and (min-width: 780px){
-       height: 225px;
-     ol{
-       display: flex;
-       flex-direction: row;
-       li{
-        width: 34%;
-       }
-     }
-
-   }           
+       }       
+     }     
 }

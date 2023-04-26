@@ -25,9 +25,24 @@
                     border-radius: 15px 15px 0px 0px;
                 }
                 &-info{ 
-                    @extend %rowbetween;                                        
+                    display: flex;
+                    justify-content:space-between;
+                    align-items: center;                                     
                     height: 25%;                 
                    padding: 0px 20px 0px 10px;
+                   i{                    
+                    font-size: larger;                   
+                    transition: all 1s;
+                     &:hover{
+                        background-image:linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+                         background-clip:content-box;
+                         /*background-clip:text;
+                        -webkit-background-clip: text;
+                        color: transparent; */
+                         
+                        transform: scale(1.13);
+                     }  
+                  }
                     
                 }
                 .nouveau{
@@ -41,38 +56,10 @@
                     color:$vert-foncer;
                     background-color: $vert-clair;
                     border-radius: 1px; 
-                }
-                
-
-                 .fa-regular.fa-heart{                    
-                    font-size: large;                   
-                                      
-                    transition: background-image 1s;
-                    &:hover{
-                        background-image: $color-linear;
-                        background-clip: padding-box;
-                        background-clip:text;
-                        -webkit-background-clip: text;
-                        color: transparent;
-                       /*opacity: 1;
-                      transform: scale(1.13);*/
-                    }  
-               }    
-            }
-                   
+                }                
+                 
+            }                   
         }
         
-        @media screen and (min-width:780px) { 
-             height: 600px;
-              .tous-les-cartes{
-                width: 90%;
-                 display: flex;
-                   flex-direction: row;
-                   flex-wrap: wrap;
-                   justify-content: space-between;               
-                   .lien{
-                    width: 45%;
-                   }
-                 }
-           }
+       
     }            

@@ -25,7 +25,7 @@ p {
   font-size: 18px;
 }
 
-.cartes .tous-les-cartes, .cartes, .section-fonction ol, .section-fonction {
+.cartes .tous-les-cartes, .cartes, .section-fonction ol, .section-fonction, .menu {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -37,31 +37,40 @@ p {
   align-items: center;
 }
 
-.tous-main .main-palettes .titre-palette, .cartes .tous-les-cartes .cartes-cadre-info {
+.tous-main .main-palettes .titre-palette {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.fa-solid.fa-heart {
-  color: transparent;
-  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 0;
-  transition: opacity 2s;
-}
-.fa-solid.fa-heart:hover {
-  opacity: 1;
-  transform: scale(1.13);
-}
-
+/* .fa-solid.fa-heart{                    
+   color: transparent;
+   background-image:linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+   background-clip:text;
+   -webkit-background-clip: text;
+   opacity: 0;
+   transition: opacity 2s;
+    &:hover{
+       opacity: 1;
+      transform: scale(1.13);
+    }  
+ }*/
 @keyframes rotation {
   0% {
     transform: rotate(280deg);
   }
   100% {
     transform: rotate(0);
+  }
+}
+@keyframes ani-scale {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 .loader {
@@ -123,6 +132,18 @@ header h1 {
   font-size: 40px;
 }
 
+.header-flech {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin-left: 20px;
+}
+.header-flech i {
+  font-size: larger;
+  color: #000;
+}
+
 footer {
   background-color: #101010;
   height: 180px;
@@ -132,11 +153,14 @@ footer {
   color: white;
   padding-left: 30px;
 }
+footer a {
+  text-decoration: none;
+}
 footer h1 {
   font-family: "Shrikhand";
   font-style: italic;
   font-size: 18px;
-  font-weight: 400px;
+  font-weight: 400;
 }
 footer h4 {
   font-weight: 500;
@@ -146,6 +170,7 @@ footer h4 {
 footer p {
   font-weight: 300;
   font-size: 16px;
+  color: white;
 }
 footer div {
   display: flex;
@@ -178,9 +203,6 @@ footer article {
 .menu {
   background-color: #f7f7f7;
   height: 320px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   align-items: center;
 }
 .menu h2 {
@@ -194,16 +216,23 @@ footer article {
   width: 79%;
   text-align: center;
 }
-.menu h3 {
+.menu .button1 {
   width: 45%;
   text-align: center;
   color: white;
   border-radius: 25px 25px 25px 25px;
+  border: none;
   padding: 15px;
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   font-size: 16px;
   font-weight: 500;
-  box-shadow: 0px 4px 10px 0px #000000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: all 2s;
+}
+.menu .button1:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
 }
 
 .section-fonction {
@@ -237,24 +266,17 @@ footer article {
 }
 .section-fonction ol li i {
   color: #7e7e7e;
+  font-size: larger;
 }
 .section-fonction ol li i:hover {
   color: #9356DC;
 }
+.section-fonction ol li:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
 .section-fonction ol .fonction3 i {
   color: #9356DC;
-}
-@media screen and (min-width: 780px) {
-  .section-fonction {
-    height: 225px;
-  }
-  .section-fonction ol {
-    display: flex;
-    flex-direction: row;
-  }
-  .section-fonction ol li {
-    width: 34%;
-  }
 }
 
 .cartes {
@@ -287,8 +309,23 @@ footer article {
   border-radius: 15px 15px 0px 0px;
 }
 .cartes .tous-les-cartes .cartes-cadre-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 25%;
   padding: 0px 20px 0px 10px;
+}
+.cartes .tous-les-cartes .cartes-cadre-info i {
+  font-size: larger;
+  transition: all 1s;
+}
+.cartes .tous-les-cartes .cartes-cadre-info i:hover {
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: content-box;
+  /*background-clip:text;
+  -webkit-background-clip: text;
+  color: transparent; */
+  transform: scale(1.13);
 }
 .cartes .tous-les-cartes .cartes-cadre .nouveau {
   font-weight: 500;
@@ -301,34 +338,6 @@ footer article {
   color: #008766;
   background-color: #99E2D0;
   border-radius: 1px;
-}
-.cartes .tous-les-cartes .cartes-cadre .fa-regular.fa-heart {
-  font-size: large;
-  transition: background-image 1s;
-}
-.cartes .tous-les-cartes .cartes-cadre .fa-regular.fa-heart:hover {
-  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  background-clip: padding-box;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  /*opacity: 1;
-  transform: scale(1.13);*/
-}
-@media screen and (min-width: 780px) {
-  .cartes {
-    height: 600px;
-  }
-  .cartes .tous-les-cartes {
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .cartes .tous-les-cartes .lien {
-    width: 45%;
-  }
 }
 
 header {
@@ -344,16 +353,6 @@ header h1 {
   font-size: 40px;
 }
 
-@keyframes ani-scale {
-  0% {
-    transform: translateY(50%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 .header-flech {
   display: flex;
   justify-content: space-between;
@@ -366,6 +365,101 @@ header h1 {
   color: #000;
 }
 
+.section-menu {
+  width: 98%;
+}
+.section-menu h3 {
+  width: 5%;
+  font-weight: 300;
+  font-size: 16px;
+  border-bottom: solid 2px #99E2D0;
+}
+.section-menu .tous-repas {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.section-menu .tous-repas .repas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px;
+  background-color: white;
+  width: 98%;
+  height: 25%;
+  overflow: hidden;
+  box-shadow: 2px 2px 2px #EAEAEA;
+  animation: ani-scale 1s;
+  animation-fill-mode: backwards;
+}
+.section-menu .tous-repas .repas:nth-child(1) {
+  animation-delay: 100ms;
+}
+.section-menu .tous-repas .repas:nth-child(2) {
+  animation-delay: 200ms;
+}
+.section-menu .tous-repas .repas:nth-child(3) {
+  animation-delay: 300ms;
+}
+.section-menu .tous-repas .repas h4 {
+  font-weight: 500;
+  font-size: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.section-menu .tous-repas .repas p {
+  font-weight: 300;
+  font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.section-menu .tous-repas .repas .repas-proposer {
+  padding: 10px 0px 10px 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: initial;
+}
+.section-menu .tous-repas .repas .price-cheks {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.section-menu .tous-repas .repas .price-cheks .price {
+  font-weight: 700;
+  padding-top: 15px;
+}
+.section-menu .tous-repas .repas .price-cheks .cheks {
+  width: 10px;
+  background-color: #99E2D0;
+  border-radius: 0px 25px 25px 0px;
+  padding: 25px;
+  margin-right: -4rem;
+  transition: margin-right 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-menu .tous-repas .repas .price-cheks .cheks i {
+  background-color: white;
+  color: #99E2D0;
+  border-radius: 50px;
+}
+.section-menu .tous-repas .repas:hover {
+  cursor: pointer;
+}
+.section-menu .tous-repas .repas:hover .cheks {
+  margin-right: 0px;
+}
+.section-menu .tous-repas .repas:hover i {
+  animation: rotation 1s ease-in-out;
+}
+
 img {
   position: relative;
   -o-object-fit: cover;
@@ -376,7 +470,7 @@ img {
 
 .tous-main .main-palettes {
   text-align: center;
-  margin-top: -10%;
+  margin-top: -5%;
   padding-left: 20px;
   border-radius: 35px 35px 0px 0px;
   background-color: #f7f7f7;
@@ -398,113 +492,26 @@ img {
   position: absolute;
   left: 90%;
 }
-.tous-main .main-palettes .section-menu {
-  width: 98%;
-}
-.tous-main .main-palettes .section-menu h3 {
-  width: 5%;
-  font-weight: 300;
-  font-size: 16px;
-  border-bottom: solid 2px #99E2D0;
-}
-.tous-main .main-palettes .section-menu .tous-repas {
-  width: 100%;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-.tous-main .main-palettes .section-menu .tous-repas .repas {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 25px;
-  background-color: white;
-  width: 98%;
-  height: 25%;
-  overflow: hidden;
-  box-shadow: 2px 2px 2px #EAEAEA;
-  animation: ani-scale 1s;
-  animation-fill-mode: backwards;
-}
-.tous-main .main-palettes .section-menu .tous-repas .repas:nth-child(1) {
-  animation-delay: 100ms;
-}
-.tous-main .main-palettes .section-menu .tous-repas .repas:nth-child(2) {
-  animation-delay: 200ms;
-}
-.tous-main .main-palettes .section-menu .tous-repas .repas:nth-child(3) {
-  animation-delay: 300ms;
-}
-.tous-main .main-palettes .section-menu .tous-repas .repas h4 {
-  font-weight: 500;
-  font-size: 18px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.tous-main .main-palettes .section-menu .tous-repas .repas p {
-  font-weight: 300;
-  font-size: 15px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.tous-main .main-palettes .section-menu .tous-repas .repas .repas-proposer {
-  padding: 10px 0px 10px 10px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  text-align: initial;
-}
-.tous-main .main-palettes .section-menu .tous-repas .repas .price-cheks {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-.tous-main .main-palettes .section-menu .tous-repas .repas .price-cheks .price {
-  font-weight: 700;
-  padding-top: 15px;
-}
-.tous-main .main-palettes .section-menu .tous-repas .repas .price-cheks .cheks {
-  width: 10px;
-  background-color: #99E2D0;
-  border-radius: 0px 25px 25px 0px;
-  padding: 25px;
-  margin-right: -4rem;
-  transition: margin-right 1s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.tous-main .main-palettes .section-menu .tous-repas .repas .price-cheks .cheks i {
-  background-color: white;
-  color: #99E2D0;
-  border-radius: 50px;
-}
-.tous-main .main-palettes .section-menu .tous-repas .repas:hover {
-  cursor: pointer;
-}
-.tous-main .main-palettes .section-menu .tous-repas .repas:hover .cheks {
-  margin-right: 0px;
-}
-.tous-main .main-palettes .section-menu .tous-repas .repas:hover i {
-  animation: rotation 1s ease-in-out;
-}
 .tous-main .main-palettes .button {
   height: 20vh;
 }
 .tous-main .main-palettes .button h5 {
+  width: 45%;
   text-align: center;
   color: white;
-  width: 45%;
   border-radius: 25px 25px 25px 25px;
+  border: none;
   padding: 15px;
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   font-size: 16px;
   font-weight: 500;
-  box-shadow: 0px 4px 10px 0px #000000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: all 2s;
+}
+.tous-main .main-palettes .button h5:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
 }
 
 @media screen and (min-width: 780px) {
@@ -535,5 +542,33 @@ img {
     display: flex;
     flex-direction: row;
     align-items: end;
+  }
+}
+@media screen and (min-width: 780px) {
+  .cartes {
+    height: 600px;
+  }
+  .cartes .tous-les-cartes {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .cartes .tous-les-cartes .lien {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 780px) {
+  .section-fonction {
+    height: 200px;
+  }
+  .section-fonction ol {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .section-fonction ol li {
+    width: 34%;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -35,7 +35,7 @@ p{
     align-items: center;
  }
 
- .fa-solid.fa-heart{                    
+/* .fa-solid.fa-heart{                    
    color: transparent;
    background-image:linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
    background-clip:text;
@@ -46,7 +46,7 @@ p{
        opacity: 1;
       transform: scale(1.13);
     }  
- }
+ }*/
  //keyframe
  @keyframes rotation{
    0%{
@@ -56,6 +56,17 @@ p{
 transform: rotate(0);
    }
  }
+
+ @keyframes ani-scale{
+  0%{
+   transform:translateY(50%);
+   opacity: 0;
+  }
+  100%{
+   transform: translateY(0);
+   opacity: 1;
+  }
+}
  //loaders
  .loader{
    background-color: #fff;

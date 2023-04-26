@@ -1,4 +1,4 @@
-footer{
+footer{    
     background-color: #101010;
     height: 180px;
     display: flex;
@@ -6,11 +6,12 @@ footer{
     justify-content: space-around;
     color: white;
     padding-left: 30px;
+    a{text-decoration: none;}
     h1{
         font-family: "Shrikhand";
         font-style: italic;
         font-size: 18px; 
-        font-weight: 400px;       
+        font-weight: 400;       
     }
     h4{
         font-weight: 500;
@@ -20,17 +21,16 @@ footer{
     p{
         font-weight: 300;
         font-size: 16px;
+          color: white;          
     }
     div{
-        display: flex;
-         
+        display: flex;         
     }
     article{
         height: 55%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;       
-
+        justify-content: space-between;    
     }
     
 }

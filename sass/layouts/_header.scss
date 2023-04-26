@@ -10,3 +10,15 @@ header{
     font-size: 40px;
    }  
   }
+  .header-flech{
+    i{
+        font-size: larger;
+        color:#000;
+    } 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     width: 60%;
+     margin-left: 20px;
+     
+  }
