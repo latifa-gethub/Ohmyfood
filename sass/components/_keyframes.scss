@@ -1,0 +1,41 @@
+@keyframes rotation{
+    0%{
+     transform: rotate(280deg);
+    }
+    100%{
+ transform: rotate(0);
+    }
+  }
+ 
+  @keyframes ani-scale{
+   0%{
+    transform:translateY(50%);
+    opacity: 0;
+   }
+   100%{
+    transform: translateY(0);
+    opacity: 1;
+   }
+ }
+ @keyframes ani-ratation{
+    0%{transform: rotate(0);
+         }
+    100%{transform: rotate(360deg);
+   }
+  }
+  @keyframes disparaitre{
+    to{
+       transform: scale(0);
+    }
+  }
+  @keyframes loader-lettre{
+   0% {
+     transform: translate(0px);
+   }
+   100%{
+     transform: translateY(-15px);
+   }
+  }
+  @keyframes scale-heart{
+   to{ transform:scale(1.1);
+  }}

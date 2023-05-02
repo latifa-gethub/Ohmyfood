@@ -2,18 +2,18 @@
 
 .menu{
     background-color: $backgroud-gris-clair;
-    height: 320px;
+    height: 215px;
      @extend %flexcolumn;
     align-items: center;     
      & h2{ 
       margin-left: 0px;       
-        width: 61%;
+        width: 65%;
         text-align: center;
        }
      & p{
         font-weight: 300;
        font-size: 18px;
-       width: 79%;
+       width: 82%;
        text-align: center;}
        & .button1{
         @include button;

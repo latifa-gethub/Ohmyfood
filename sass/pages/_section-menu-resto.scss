@@ -1,0 +1,21 @@
+.section-menu{   
+  margin-left: 10px;      
+    width: 95%;
+    @media screen and (min-width:780px){
+      width: 80%;
+    }      
+  h3{            
+    width: 5%;
+    font-weight: 300;
+    font-size: 16px;
+    border-bottom: solid 2px $vert-clair;
+   }
+   .tous-repas{
+    width: 100%;
+    margin-top: 10px;            
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;  
+ }        
+}

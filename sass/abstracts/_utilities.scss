@@ -9,8 +9,7 @@ h3{
     font-size:18px;
     font-weight: 700;
   }
- h2{
-    padding-left: 25px;
+ h2{     
     font-weight: 700;
     font-size: 24px;
 } 
@@ -34,44 +33,13 @@ p{
     justify-content:space-between;
     align-items: center;
  }
-
-/* .fa-solid.fa-heart{                    
-   color: transparent;
-   background-image:linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-   background-clip:text;
-   -webkit-background-clip: text;
-   opacity: 0;
-   transition: opacity 2s;
-    &:hover{
-       opacity: 1;
-      transform: scale(1.13);
-    }  
- }*/
+ 
  //keyframe
- @keyframes rotation{
-   0%{
-    transform: rotate(280deg);
-   }
-   100%{
-transform: rotate(0);
-   }
- }
 
- @keyframes ani-scale{
-  0%{
-   transform:translateY(50%);
-   opacity: 0;
-  }
-  100%{
-   transform: translateY(0);
-   opacity: 1;
-  }
-}
  //loaders
  .loader{
    background-color: #fff;
-   opacity: 0.9;
-    
+   opacity: 0.9;    
    height: 100vh;
    position: fixed;   
    inset: 0px;
@@ -83,33 +51,58 @@ transform: rotate(0);
      //loader quart de cercle
    .loader-quart{
       position: relative;
-     height: 50px;
-     width: 50px;
-     border-radius: 50px;
-     border: 6px solid rgba($color: #dad6d6, $alpha: 1.0);
-     display: inline-block; 
+     height: 90px;
+     width: 90px;
+     border-radius: 56px;
+     border: 12px solid transparent;
      vertical-align: middle;
-      
-   }
+     inset: 12px;
+     display: inline-block;
+     i{position: absolute;
+      inset: 30px;       
+      font-size:40px;
+      color:$violet-foncer;
+      animation:ani-ratation 2s infinite;}
+      .contener-letter{ 
+         font-size: 22px;        
+         position: absolute;          
+         font-family:"Shrikhand";
+        inset: -7rem;
+       animation: loader-lettre 1.2s infinite linear;
+        animation-delay: 4s; 
+           .l1,.l3,.l5,.l7{color:$violet-foncer;}
+           .l2,.l4,.l6,.l8{color: $violet-clair;}
+            &:nth-child(1){
+            animation-delay:0.1s;          
+                }
+            &:nth-child(2){
+            animation-delay:0.2s;
+           }
+           &:nth-child(3){
+            animation-delay:0.3s;
+           }
+           &:nth-child(4){
+            animation-delay:0.4s;
+            }
+             &:nth-child(5){
+             animation-delay:0.5s;
+              }
+             &:nth-child(6){
+              animation-delay:0.6s;
+              }      
+                   
+      }
+   }      
    .loader-quart::after{
-      content: "";
+      content: "";       
       position: absolute;
-      inset: -6px;
-      height: 50px;
-     width: 50px;
-     border-radius: 50px;
-     
-     border: 6px solid transparent;
-     border-top-color: $violet-foncer;
-     animation: ani-loader 1s infinite linear; 
-   }
+      inset: -6px;       
+      height: 100px;
+     width: 100px;
+     border-radius: 56px;     
+     border-right: 6px solid transparent;
+     border-top: 10px solid $vert-foncer;     
+     animation: ani-ratation 1s infinite linear;      
+   }   
  }
- @keyframes ani-loader{
-   0%{transform: rotate(0);}
-   100%{transform: rotate(360deg);}
- }
- @keyframes disparaitre{
-   to{
-      transform: scale(0);
-   }
- }
+ 

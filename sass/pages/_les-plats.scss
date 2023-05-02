@@ -1,0 +1,42 @@
+.repas{
+    @extend %rowbetween;
+     border-radius: 25px;
+     background-color: white;
+     width: 98%; height: 25%;
+     overflow: hidden;            
+     box-shadow: 2px 2px 2px $bakhgroud-gris-foncer;
+     animation: ani-scale 3s;
+     animation-fill-mode: backwards;    
+     @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i*100ms;
+       }
+   } 
+    .price-cheks{@include price-cheks;}
+    &:hover{ 
+      cursor: pointer;  
+      .cheks{ margin-right: 0px;}     
+      i{animation:rotation 1s ease-in-out;} 
+   } 
+   .repas-proposer{
+     padding: 10px 0px 10px 10px;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow:ellipsis;
+     text-align: initial;
+     h4{
+       font-weight: 500;
+       font-size: 18px;
+       overflow: hidden;
+       white-space: nowrap;
+       text-overflow:ellipsis;
+       }
+     p{
+       font-weight: 300;
+       font-size: 15px;
+       overflow: hidden;
+       white-space: nowrap;
+       text-overflow:ellipsis;
+      }
+    }  
+}

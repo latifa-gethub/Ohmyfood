@@ -1,24 +1,67 @@
 @mixin button{    
-        width: 45%;
+        width: 190px;
         text-align: center;
         color: white;
         border-radius: 25px 25px 25px 25px;
         border: none;
-        padding: 15px;
+        padding: 12px;
         background-image:$color-linear;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 500;
         box-shadow:0px 4px 10px $color-shadow;
-       transition: all 2s;
+       transition: all 4s;
+       @media screen and (min-width:780px) {
+        width: 220px;
+       }
         &:hover{
           transform: scale(1.1);
         opacity: 0.9;
         box-shadow:5px 10px 10px $color-shadow;
         }
-}
- @mixin heart-p{
-    position: absolute;
-    left: 90%;
-    
-                          
-   }   
+}//////////*************
+ @mixin heart{
+  font-size: larger;
+  color: white;
+ -webkit-text-stroke-width: 1.5px;
+ -webkit-text-stroke-color:black;
+ transition: background-image 2s;                       
+ &:hover{
+    font-size: x-large;
+     -webkit-text-stroke-color:white; 
+     background-image:$color-linear;
+     background-clip:text;
+     -webkit-background-clip: text;
+     color: transparent;        
+   transform: scale(1.1) 2s ;
+  }  
+}  //////******************
+@mixin price-cheks{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  .price{
+  font-weight: 700;
+  padding-top: 15px;
+ }
+ .cheks{
+  width: 10px;
+  background-color:$vert-clair;
+  border-radius: 0px 25px 25px 0px;
+  padding: 25px;
+   margin-right: -4rem;
+  transition: margin-right 1s;
+   @extend %rowcenter;
+ i{
+    background-color: white;
+     color:$vert-clair;
+     border-radius: 50px;
+  }       
+     }
+
+
+
+
+
+
+  
+} 

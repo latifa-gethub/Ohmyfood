@@ -1,0 +1,77 @@
+//version disktop pour la page restaurant
+@media screen and (min-width: 780px){         
+    .tous-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+       .main-palettes{
+           width: 80%;
+           align-items: center;
+           padding-left: 0px;
+           .titre-palette{
+               display: flex;
+               justify-content: center;
+               gap: 20px;
+           }
+           .section-menu{
+               width: 70%;
+               margin-left: 25px;
+              
+          }                     
+       } 
+    }
+    footer{padding-left: 0px;
+       
+       height: 90px;           
+        display:flex;        
+        justify-content: end;
+        align-items: end;
+        padding-bottom: 20px;        
+            article{
+              padding-right: 20px;         
+             display: flex;            
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            align-items: end;
+            gap: 10px;
+            .tous-les-propo{
+              display: flex;
+              gap:15px;
+            }
+            }
+    }                
+} 
+//page d'acueuil
+@media screen and (min-width:780px) { 
+    .cartes{
+    height: 600px;
+    padding-left: 5rem;       
+     .tous-les-cartes{
+               width: 90%;                  
+               display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;               
+                .lien{
+                width: 45%;
+          }
+        }
+  }  
+}
+// section-fonction de pages d'acueil
+@media screen and (min-width: 780px){
+     .section-fonction{
+      margin-left: 70px;
+      height: 200px;
+      width: 86%;     
+  ol{    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+     li{
+       width: 32%;
+     }
+  }
+}
+
+}                  

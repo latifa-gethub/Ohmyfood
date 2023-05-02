@@ -15,7 +15,6 @@ h3 {
 }
 
 h2 {
-  padding-left: 25px;
   font-weight: 700;
   font-size: 24px;
 }
@@ -31,48 +30,18 @@ p {
   justify-content: space-around;
 }
 
-.tous-main .main-palettes .button, .section-fonction ol li .chiffre, .section-fonction ol li {
+.repas .price-cheks .cheks, .tous-main .main-palettes .button, .section-fonction ol li .chiffre, .section-fonction ol li {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.tous-main .main-palettes .titre-palette {
+.repas, .tous-main .main-palettes .titre-palette {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* .fa-solid.fa-heart{                    
-   color: transparent;
-   background-image:linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-   background-clip:text;
-   -webkit-background-clip: text;
-   opacity: 0;
-   transition: opacity 2s;
-    &:hover{
-       opacity: 1;
-      transform: scale(1.13);
-    }  
- }*/
-@keyframes rotation {
-  0% {
-    transform: rotate(280deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-@keyframes ani-scale {
-  0% {
-    transform: translateY(50%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 .loader {
   background-color: #fff;
   opacity: 0.9;
@@ -87,38 +56,65 @@ p {
 }
 .loader .loader-quart {
   position: relative;
-  height: 50px;
-  width: 50px;
-  border-radius: 50px;
-  border: 6px solid #dad6d6;
-  display: inline-block;
+  height: 90px;
+  width: 90px;
+  border-radius: 56px;
+  border: 12px solid transparent;
   vertical-align: middle;
+  inset: 12px;
+  display: inline-block;
+}
+.loader .loader-quart i {
+  position: absolute;
+  inset: 30px;
+  font-size: 40px;
+  color: #9356DC;
+  animation: ani-ratation 2s infinite;
+}
+.loader .loader-quart .contener-letter {
+  font-size: 22px;
+  position: absolute;
+  font-family: "Shrikhand";
+  inset: -7rem;
+  animation: loader-lettre 1.2s infinite linear;
+  animation-delay: 4s;
+}
+.loader .loader-quart .contener-letter .l1, .loader .loader-quart .contener-letter .l3, .loader .loader-quart .contener-letter .l5, .loader .loader-quart .contener-letter .l7 {
+  color: #9356DC;
+}
+.loader .loader-quart .contener-letter .l2, .loader .loader-quart .contener-letter .l4, .loader .loader-quart .contener-letter .l6, .loader .loader-quart .contener-letter .l8 {
+  color: #FF79DA;
+}
+.loader .loader-quart .contener-letter:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.loader .loader-quart .contener-letter:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loader .loader-quart .contener-letter:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.loader .loader-quart .contener-letter:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.loader .loader-quart .contener-letter:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.loader .loader-quart .contener-letter:nth-child(6) {
+  animation-delay: 0.6s;
 }
 .loader .loader-quart::after {
   content: "";
   position: absolute;
   inset: -6px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50px;
-  border: 6px solid transparent;
-  border-top-color: #9356DC;
-  animation: ani-loader 1s infinite linear;
+  height: 100px;
+  width: 100px;
+  border-radius: 56px;
+  border-right: 6px solid transparent;
+  border-top: 10px solid #008766;
+  animation: ani-ratation 1s infinite linear;
 }
 
-@keyframes ani-loader {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes disparaitre {
-  to {
-    transform: scale(0);
-  }
-}
 header {
   width: 100%;
   position: relative;
@@ -128,58 +124,67 @@ header {
 header h1 {
   font-family: "Shrikhand";
   font-style: italic;
-  font-weight: 800;
-  font-size: 40px;
+  font-weight: 500;
+  font-size: 32px;
 }
 
 .header-flech {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 60%;
-  margin-left: 20px;
+  width: 64%;
+  margin-left: 10px;
 }
 .header-flech i {
   font-size: larger;
   color: #000;
 }
+@media screen and (min-width: 780px) {
+  .header-flech {
+    width: 55%;
+  }
+}
 
 footer {
   background-color: #101010;
-  height: 180px;
+  height: 200px;
+  color: white;
+  padding-left: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  color: white;
-  padding-left: 30px;
 }
 footer a {
   text-decoration: none;
 }
-footer h1 {
+footer article {
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+footer article h2 {
   font-family: "Shrikhand";
   font-style: italic;
   font-size: 18px;
   font-weight: 400;
 }
-footer h4 {
+footer article h4 {
   font-weight: 500;
   font-size: 18px;
   margin-left: 10px;
 }
-footer p {
+footer article p {
   font-weight: 300;
   font-size: 16px;
   color: white;
 }
-footer div {
+footer article .tous-les-propo div {
   display: flex;
 }
-footer article {
-  height: 55%;
+footer article .tous-les-propo .propo1, footer article .tous-les-propo .propo2 {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
 }
 
 .position {
@@ -189,7 +194,7 @@ footer article {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 .position .champ-position {
   font-size: 16px;
@@ -202,32 +207,37 @@ footer article {
 
 .menu {
   background-color: #f7f7f7;
-  height: 320px;
+  height: 215px;
   align-items: center;
 }
 .menu h2 {
   margin-left: 0px;
-  width: 61%;
+  width: 65%;
   text-align: center;
 }
 .menu p {
   font-weight: 300;
   font-size: 18px;
-  width: 79%;
+  width: 82%;
   text-align: center;
 }
 .menu .button1 {
-  width: 45%;
+  width: 190px;
   text-align: center;
   color: white;
   border-radius: 25px 25px 25px 25px;
   border: none;
-  padding: 15px;
+  padding: 12px;
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  transition: all 2s;
+  transition: all 4s;
+}
+@media screen and (min-width: 780px) {
+  .menu .button1 {
+    width: 220px;
+  }
 }
 .menu .button1:hover {
   transform: scale(1.1);
@@ -236,30 +246,30 @@ footer article {
 }
 
 .section-fonction {
-  height: 380px;
+  margin-left: 30px;
+  width: 90%;
+  height: 340px;
 }
 .section-fonction ol {
-  height: 70%;
-  margin-left: 30px;
-  gap: 15px;
+  height: 65%;
+  gap: 10px;
 }
 .section-fonction ol li {
   position: relative;
-  font-weight: 500;
-  font-size: 16px;
-  width: 90%;
-  height: 30%;
+  font-weight: 400;
+  font-size: 15px;
+  height: 70px;
   border-radius: 20px;
   background-color: #f7f7f7;
-  gap: 10px;
+  gap: 5px;
   box-shadow: 1px 10px 14px gainsboro;
 }
 .section-fonction ol li .chiffre {
   position: absolute;
   left: -1%;
   font-size: 18px;
-  width: 24px;
-  height: 24px;
+  width: 23px;
+  height: 23px;
   border-radius: 50px;
   background-color: #9356DC;
   color: white;
@@ -268,12 +278,12 @@ footer article {
   color: #7e7e7e;
   font-size: larger;
 }
-.section-fonction ol li i:hover {
-  color: #9356DC;
-}
 .section-fonction ol li:hover {
   transform: scale(1.02);
   opacity: 0.9;
+}
+.section-fonction ol li:hover i {
+  color: #9356DC;
 }
 .section-fonction ol .fonction3 i {
   color: #9356DC;
@@ -282,11 +292,12 @@ footer article {
 .cartes {
   background-color: #f7f7f7;
   height: 1150px;
+  padding-left: 25px;
 }
 .cartes .tous-les-cartes {
-  width: 90%;
-  margin-left: 30px;
+  align-items: center;
   gap: 15px;
+  width: 90%;
 }
 .cartes .tous-les-cartes .lien {
   width: 100%;
@@ -299,7 +310,12 @@ footer article {
   height: 250px;
   background-color: white;
   border-radius: 15px;
-  box-shadow: 0px 4px 15px rgba(80, 52, 52, 0.1019607843);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  transition: all 1s;
+}
+.cartes .tous-les-cartes .cartes-cadre:hover {
+  transform: scale(1.02);
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.25);
 }
 .cartes .tous-les-cartes .cartes-cadre img {
   -o-object-fit: cover;
@@ -317,15 +333,19 @@ footer article {
 }
 .cartes .tous-les-cartes .cartes-cadre-info i {
   font-size: larger;
-  transition: all 1s;
+  color: white;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+  transition: background-image 2s;
 }
 .cartes .tous-les-cartes .cartes-cadre-info i:hover {
+  font-size: x-large;
+  -webkit-text-stroke-color: white;
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  background-clip: content-box;
-  /*background-clip:text;
+  background-clip: text;
   -webkit-background-clip: text;
-  color: transparent; */
-  transform: scale(1.13);
+  color: transparent;
+  transform: scale(1.1) 2s;
 }
 .cartes .tous-les-cartes .cartes-cadre .nouveau {
   font-weight: 500;
@@ -349,24 +369,35 @@ header {
 header h1 {
   font-family: "Shrikhand";
   font-style: italic;
-  font-weight: 800;
-  font-size: 40px;
+  font-weight: 500;
+  font-size: 32px;
 }
 
 .header-flech {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 60%;
-  margin-left: 20px;
+  width: 64%;
+  margin-left: 10px;
 }
 .header-flech i {
   font-size: larger;
   color: #000;
 }
+@media screen and (min-width: 780px) {
+  .header-flech {
+    width: 55%;
+  }
+}
 
 .section-menu {
-  width: 98%;
+  margin-left: 10px;
+  width: 95%;
+}
+@media screen and (min-width: 780px) {
+  .section-menu {
+    width: 80%;
+  }
 }
 .section-menu h3 {
   width: 5%;
@@ -382,83 +413,6 @@ header h1 {
   align-items: center;
   gap: 10px;
 }
-.section-menu .tous-repas .repas {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 25px;
-  background-color: white;
-  width: 98%;
-  height: 25%;
-  overflow: hidden;
-  box-shadow: 2px 2px 2px #EAEAEA;
-  animation: ani-scale 1s;
-  animation-fill-mode: backwards;
-}
-.section-menu .tous-repas .repas:nth-child(1) {
-  animation-delay: 100ms;
-}
-.section-menu .tous-repas .repas:nth-child(2) {
-  animation-delay: 200ms;
-}
-.section-menu .tous-repas .repas:nth-child(3) {
-  animation-delay: 300ms;
-}
-.section-menu .tous-repas .repas h4 {
-  font-weight: 500;
-  font-size: 18px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.section-menu .tous-repas .repas p {
-  font-weight: 300;
-  font-size: 15px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.section-menu .tous-repas .repas .repas-proposer {
-  padding: 10px 0px 10px 10px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  text-align: initial;
-}
-.section-menu .tous-repas .repas .price-cheks {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-.section-menu .tous-repas .repas .price-cheks .price {
-  font-weight: 700;
-  padding-top: 15px;
-}
-.section-menu .tous-repas .repas .price-cheks .cheks {
-  width: 10px;
-  background-color: #99E2D0;
-  border-radius: 0px 25px 25px 0px;
-  padding: 25px;
-  margin-right: -4rem;
-  transition: margin-right 1s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.section-menu .tous-repas .repas .price-cheks .cheks i {
-  background-color: white;
-  color: #99E2D0;
-  border-radius: 50px;
-}
-.section-menu .tous-repas .repas:hover {
-  cursor: pointer;
-}
-.section-menu .tous-repas .repas:hover .cheks {
-  margin-right: 0px;
-}
-.section-menu .tous-repas .repas:hover i {
-  animation: rotation 1s ease-in-out;
-}
 
 img {
   position: relative;
@@ -471,14 +425,15 @@ img {
 .tous-main .main-palettes {
   text-align: center;
   margin-top: -5%;
-  padding-left: 20px;
   border-radius: 35px 35px 0px 0px;
   background-color: #f7f7f7;
   position: relative;
-  height: 190vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+.tous-main .main-palettes .titre-palette {
+  margin-right: 20px;
 }
 .tous-main .main-palettes .titre-palette h2 {
   position: relative;
@@ -486,27 +441,44 @@ img {
   font-style: italic;
   font-weight: 400;
   font-size: 25px;
-  margin-left: -20px;
+  padding: 15px;
 }
 .tous-main .main-palettes .titre-palette i {
-  position: absolute;
-  left: 90%;
+  font-size: larger;
+  color: white;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+  transition: background-image 2s;
+}
+.tous-main .main-palettes .titre-palette i:hover {
+  font-size: x-large;
+  -webkit-text-stroke-color: white;
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transform: scale(1.1) 2s;
 }
 .tous-main .main-palettes .button {
   height: 20vh;
 }
 .tous-main .main-palettes .button h5 {
-  width: 45%;
+  width: 190px;
   text-align: center;
   color: white;
   border-radius: 25px 25px 25px 25px;
   border: none;
-  padding: 15px;
+  padding: 12px;
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  transition: all 2s;
+  transition: all 4s;
+}
+@media screen and (min-width: 780px) {
+  .tous-main .main-palettes .button h5 {
+    width: 220px;
+  }
 }
 .tous-main .main-palettes .button h5:hover {
   transform: scale(1.1);
@@ -522,31 +494,43 @@ img {
   }
   .tous-main .main-palettes {
     width: 80%;
+    align-items: center;
+    padding-left: 0px;
   }
   .tous-main .main-palettes .titre-palette {
     display: flex;
     justify-content: center;
+    gap: 20px;
   }
   .tous-main .main-palettes .section-menu {
-    width: 80%;
-    margin-left: 50px;
+    width: 70%;
+    margin-left: 25px;
   }
   footer {
+    padding-left: 0px;
+    height: 90px;
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: end;
     align-items: end;
     padding-bottom: 20px;
   }
   footer article {
-    width: 75%;
+    padding-right: 20px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
+    justify-content: space-around;
     align-items: end;
+    gap: 10px;
+  }
+  footer article .tous-les-propo {
+    display: flex;
+    gap: 15px;
   }
 }
 @media screen and (min-width: 780px) {
   .cartes {
     height: 600px;
+    padding-left: 5rem;
   }
   .cartes .tous-les-cartes {
     width: 90%;
@@ -561,7 +545,9 @@ img {
 }
 @media screen and (min-width: 780px) {
   .section-fonction {
+    margin-left: 70px;
     height: 200px;
+    width: 86%;
   }
   .section-fonction ol {
     display: flex;
@@ -569,6 +555,121 @@ img {
     align-items: center;
   }
   .section-fonction ol li {
-    width: 34%;
+    width: 32%;
   }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(280deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes ani-scale {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes ani-ratation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes disparaitre {
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes loader-lettre {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+@keyframes scale-heart {
+  to {
+    transform: scale(1.1);
+  }
+}
+.repas {
+  border-radius: 25px;
+  background-color: white;
+  width: 98%;
+  height: 25%;
+  overflow: hidden;
+  box-shadow: 2px 2px 2px #EAEAEA;
+  animation: ani-scale 3s;
+  animation-fill-mode: backwards;
+}
+.repas:nth-child(1) {
+  animation-delay: 100ms;
+}
+.repas:nth-child(2) {
+  animation-delay: 200ms;
+}
+.repas:nth-child(3) {
+  animation-delay: 300ms;
+}
+.repas .price-cheks {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.repas .price-cheks .price {
+  font-weight: 700;
+  padding-top: 15px;
+}
+.repas .price-cheks .cheks {
+  width: 10px;
+  background-color: #99E2D0;
+  border-radius: 0px 25px 25px 0px;
+  padding: 25px;
+  margin-right: -4rem;
+  transition: margin-right 1s;
+}
+.repas .price-cheks .cheks i {
+  background-color: white;
+  color: #99E2D0;
+  border-radius: 50px;
+}
+.repas:hover {
+  cursor: pointer;
+}
+.repas:hover .cheks {
+  margin-right: 0px;
+}
+.repas:hover i {
+  animation: rotation 1s ease-in-out;
+}
+.repas .repas-proposer {
+  padding: 10px 0px 10px 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: initial;
+}
+.repas .repas-proposer h4 {
+  font-weight: 500;
+  font-size: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.repas .repas-proposer p {
+  font-weight: 300;
+  font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }/*# sourceMappingURL=style.css.map */

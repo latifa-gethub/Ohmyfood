@@ -1,23 +1,28 @@
 .cartes{
         background-color: $backgroud-gris-clair;
-        height: 1150px;        
+        height: 1150px;
+            padding-left: 25px;     
          @extend %flexcolumn;
-        .tous-les-cartes{
-            width: 90%;
-            margin-left: 30px;
+        .tous-les-cartes{                               
              @extend %flexcolumn;
+             align-items: center;
             gap: 15px;
-            .lien{width: 100%;
-             height: auto;
-             text-decoration: none;
-             color: black;
-             }
+            width: 90%;           
+                .lien{width: 100%;
+                    height: auto;
+                    text-decoration: none;
+                    color: black;
+                }
             .cartes-cadre{                
-                  position: relative;        
+                position: relative;                        
                 height: 250px;
                 background-color: white;
                 border-radius: 15px;
-                box-shadow: 0px 4px 15px #5034341a;             
+                box-shadow: 0px 4px 15px $color-shadow;
+                transition:all 1s ;
+                &:hover{
+                    transform: scale(1.02);
+                    box-shadow:5px 10px 15px $color-shadow; }            
                 img{
                     object-fit: cover;
                     width: 100%;
@@ -31,19 +36,8 @@
                     height: 25%;                 
                    padding: 0px 20px 0px 10px;
                    i{                    
-                    font-size: larger;                   
-                    transition: all 1s;
-                     &:hover{
-                        background-image:linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-                         background-clip:content-box;
-                         /*background-clip:text;
-                        -webkit-background-clip: text;
-                        color: transparent; */
-                         
-                        transform: scale(1.13);
-                     }  
-                  }
-                    
+                    @include heart;
+                  }                   
                 }
                 .nouveau{
                     font-weight: 500;
@@ -56,10 +50,7 @@
                     color:$vert-foncer;
                     background-color: $vert-clair;
                     border-radius: 1px; 
-                }                
-                 
+                }                 
             }                   
-        }
-        
-       
+        }       
     }            

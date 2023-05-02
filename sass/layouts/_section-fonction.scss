@@ -1,43 +1,46 @@
-.section-fonction{ 
-    height: 380px;                 
+.section-fonction{  
+  margin-left: 30px;
+  width: 90%;
+    height: 340px;                 
      @extend %flexcolumn;
-    ol{  
-       height: 70%;        
-        @extend %flexcolumn;
-       margin-left: 30px;
-       gap: 15px;
-       li{ position: relative;
-           font-weight: 500;
-           font-size: 16px;
-           width: 90%;
-           height: 30%;    
+    ol{         
+       height: 65%;                  
+        @extend %flexcolumn;       
+       gap: 10px;
+       li{             
+           position: relative;
+           font-weight: 400;
+           font-size: 15px;
+           height: 70px;    
            border-radius: 20px;                        
            background-color: $backgroud-gris-clair;
             @extend %rowcenter;
-           gap: 10px;
+           gap: 5px;           
            box-shadow: 1px 10px 14px gainsboro ;
            .chiffre{
                position: absolute;
                left: -1%;
                font-size: 18px;
                @extend %rowcenter;
-               width: 24px;
-               height: 24px;
+               width: 23px;
+               height: 23px;
                border-radius: 50px;
                background-color: $violet-foncer;
                 color: #ffff;
               } 
              i{
-              color:$color-icon;
-              font-size: larger;
-              &:hover{
-              color:$violet-foncer;
-             }             
-         }
+                color:$color-icon;
+                font-size: larger;
+                     
+              }
            &:hover{
             transform: scale(1.02);
             opacity: 0.9;
            }
+           &:hover{
+            i{
+            color:$violet-foncer;}
+           }        
        }       
        .fonction3{
         i{

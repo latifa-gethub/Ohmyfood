@@ -6,11 +6,11 @@ header{
    h1{
     font-family: 'Shrikhand';
     font-style: italic;
-    font-weight: 800;
-    font-size: 40px;
+    font-weight: 500;
+    font-size: 32px;
    }  
   }
-  .header-flech{
+  .header-flech{     
     i{
         font-size: larger;
         color:#000;
@@ -18,7 +18,9 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-     width: 60%;
-     margin-left: 20px;
-     
+     width: 64%;
+     margin-left: 10px;
+     @media screen and (min-width: 780px){
+        width: 55%;
+     }    
   }
