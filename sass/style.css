@@ -42,79 +42,6 @@ p {
   align-items: center;
 }
 
-.loader {
-  background-color: #fff;
-  opacity: 0.9;
-  height: 100vh;
-  position: fixed;
-  inset: 0px;
-  text-align: center;
-  line-height: 100vh;
-  z-index: 1;
-  animation: disparaitre 2s 3s;
-  animation-fill-mode: forwards;
-}
-.loader .loader-quart {
-  position: relative;
-  height: 90px;
-  width: 90px;
-  border-radius: 56px;
-  border: 12px solid transparent;
-  vertical-align: middle;
-  inset: 12px;
-  display: inline-block;
-}
-.loader .loader-quart i {
-  position: absolute;
-  inset: 30px;
-  font-size: 40px;
-  color: #9356DC;
-  animation: ani-ratation 2s infinite;
-}
-.loader .loader-quart .contener-letter {
-  font-size: 22px;
-  position: absolute;
-  font-family: "Shrikhand";
-  inset: -7rem;
-  animation: loader-lettre 1.2s infinite linear;
-  animation-delay: 4s;
-}
-.loader .loader-quart .contener-letter .l1, .loader .loader-quart .contener-letter .l3, .loader .loader-quart .contener-letter .l5, .loader .loader-quart .contener-letter .l7 {
-  color: #9356DC;
-}
-.loader .loader-quart .contener-letter .l2, .loader .loader-quart .contener-letter .l4, .loader .loader-quart .contener-letter .l6, .loader .loader-quart .contener-letter .l8 {
-  color: #FF79DA;
-}
-.loader .loader-quart .contener-letter:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.loader .loader-quart .contener-letter:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.loader .loader-quart .contener-letter:nth-child(3) {
-  animation-delay: 0.3s;
-}
-.loader .loader-quart .contener-letter:nth-child(4) {
-  animation-delay: 0.4s;
-}
-.loader .loader-quart .contener-letter:nth-child(5) {
-  animation-delay: 0.5s;
-}
-.loader .loader-quart .contener-letter:nth-child(6) {
-  animation-delay: 0.6s;
-}
-.loader .loader-quart::after {
-  content: "";
-  position: absolute;
-  inset: -6px;
-  height: 100px;
-  width: 100px;
-  border-radius: 56px;
-  border-right: 6px solid transparent;
-  border-top: 10px solid #008766;
-  animation: ani-ratation 1s infinite linear;
-}
-
 header {
   width: 100%;
   position: relative;
@@ -246,7 +173,8 @@ footer article .tous-les-propo .propo1, footer article .tous-les-propo .propo2 {
 }
 
 .section-fonction {
-  margin-left: 30px;
+  margin-left: auto;
+  margin-right: auto;
   width: 90%;
   height: 340px;
 }
@@ -336,7 +264,7 @@ footer article .tous-les-propo .propo1, footer article .tous-les-propo .propo2 {
   color: white;
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: black;
-  transition: background-image 2s;
+  transition: all 1s;
 }
 .cartes .tous-les-cartes .cartes-cadre-info i:hover {
   font-size: x-large;
@@ -345,7 +273,7 @@ footer article .tous-les-propo .propo1, footer article .tous-les-propo .propo2 {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  transform: scale(1.1) 2s;
+  transform: scale(1.1);
 }
 .cartes .tous-les-cartes .cartes-cadre .nouveau {
   font-weight: 500;
@@ -393,6 +321,7 @@ header h1 {
 .section-menu {
   margin-left: 10px;
   width: 95%;
+  padding-top: 15px;
 }
 @media screen and (min-width: 780px) {
   .section-menu {
@@ -423,7 +352,6 @@ img {
 }
 
 .tous-main .main-palettes {
-  text-align: center;
   margin-top: -5%;
   border-radius: 35px 35px 0px 0px;
   background-color: #f7f7f7;
@@ -433,7 +361,7 @@ img {
   justify-content: space-around;
 }
 .tous-main .main-palettes .titre-palette {
-  margin-right: 20px;
+  margin-right: 30px;
 }
 .tous-main .main-palettes .titre-palette h2 {
   position: relative;
@@ -448,7 +376,7 @@ img {
   color: white;
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: black;
-  transition: background-image 2s;
+  transition: all 1s;
 }
 .tous-main .main-palettes .titre-palette i:hover {
   font-size: x-large;
@@ -457,12 +385,12 @@ img {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  transform: scale(1.1) 2s;
+  transform: scale(1.1);
 }
 .tous-main .main-palettes .button {
   height: 20vh;
 }
-.tous-main .main-palettes .button h5 {
+.tous-main .main-palettes .button .lien-button {
   width: 190px;
   text-align: center;
   color: white;
@@ -474,13 +402,14 @@ img {
   font-weight: 500;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   transition: all 4s;
+  text-decoration: none;
 }
 @media screen and (min-width: 780px) {
-  .tous-main .main-palettes .button h5 {
+  .tous-main .main-palettes .button .lien-button {
     width: 220px;
   }
 }
-.tous-main .main-palettes .button h5:hover {
+.tous-main .main-palettes .button .lien-button:hover {
   transform: scale(1.1);
   opacity: 0.9;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
@@ -625,6 +554,7 @@ img {
   display: flex;
   align-items: center;
   gap: 15px;
+  margin-left: 5px;
 }
 .repas .price-cheks .price {
   font-weight: 700;
@@ -672,4 +602,59 @@ img {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.loader {
+  background-color: #fff;
+  opacity: 0.9;
+  height: 100vh;
+  position: fixed;
+  inset: 0px;
+  text-align: center;
+  line-height: 100vh;
+  z-index: 1;
+  animation: disparaitre 2s 3s;
+  animation-fill-mode: forwards;
+}
+.loader .loader-quart {
+  position: relative;
+  height: 90px;
+  width: 90px;
+  border-radius: 56px;
+  border: 12px solid transparent;
+  vertical-align: middle;
+  inset: 12px;
+  display: inline-block;
+}
+.loader .loader-quart i {
+  position: absolute;
+  inset: 30px;
+  font-size: 40px;
+  color: #9356DC;
+  animation: ani-ratation 2s infinite;
+}
+.loader .loader-quart .contener-letter {
+  font-size: 22px;
+  position: absolute;
+  font-family: "Shrikhand";
+  inset: -7rem;
+  animation: loader-lettre 1.2s infinite linear;
+  animation-delay: 4s;
+}
+.loader .loader-quart .contener-letter .l1, .loader .loader-quart .contener-letter .l3, .loader .loader-quart .contener-letter .l5, .loader .loader-quart .contener-letter .l7 {
+  color: #9356DC;
+}
+.loader .loader-quart .contener-letter .l2, .loader .loader-quart .contener-letter .l4, .loader .loader-quart .contener-letter .l6, .loader .loader-quart .contener-letter .l8 {
+  color: #FF79DA;
+}
+.loader .loader-quart::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  height: 100px;
+  width: 100px;
+  border-radius: 56px;
+  border-right: 6px solid transparent;
+  border-top: 10px solid #008766;
+  animation: ani-ratation 1s infinite linear;
 }/*# sourceMappingURL=style.css.map */

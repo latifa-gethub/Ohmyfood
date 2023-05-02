@@ -9,8 +9,7 @@ img{
     height: 250px;
 } 
 .tous-main{    
- .main-palettes{
-    text-align: center;
+ .main-palettes{     
     margin-top: -5%;     
     border-radius:35px 35px 0px 0px;
     background-color:$backgroud-gris-clair;
@@ -21,7 +20,7 @@ img{
    
    .titre-palette{
     @extend %rowbetween;
-     margin-right: 20px;
+     margin-right: 30px;
     h2{   position: relative;      
         font-family: 'Shrikhand';
         font-style: italic;
@@ -36,9 +35,10 @@ img{
     .button{
         height: 20vh;
         @extend %rowcenter;
-      h5{
-         @include button;
-        }
+        .lien-button{
+        @include button;
+          text-decoration: none;        
+         }        
     }      
 }
 }
