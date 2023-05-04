@@ -526,11 +526,6 @@ img {
     transform: translateY(-15px);
   }
 }
-@keyframes scale-heart {
-  to {
-    transform: scale(1.1);
-  }
-}
 .repas {
   border-radius: 25px;
   background-color: white;
@@ -613,7 +608,7 @@ img {
   text-align: center;
   line-height: 100vh;
   z-index: 1;
-  animation: disparaitre 2s 3s;
+  animation: disparaitre 2s 4s;
   animation-fill-mode: forwards;
 }
 .loader .loader-quart {
@@ -639,7 +634,7 @@ img {
   font-family: "Shrikhand";
   inset: -7rem;
   animation: loader-lettre 1.2s infinite linear;
-  animation-delay: 4s;
+  animation-delay: 1s;
 }
 .loader .loader-quart .contener-letter .l1, .loader .loader-quart .contener-letter .l3, .loader .loader-quart .contener-letter .l5, .loader .loader-quart .contener-letter .l7 {
   color: #9356DC;

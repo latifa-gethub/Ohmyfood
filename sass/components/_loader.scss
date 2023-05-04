@@ -1,4 +1,4 @@
-.loader{
+  .loader{
     background-color: #fff;
     opacity: 0.9;    
     height: 100vh;
@@ -7,7 +7,7 @@
     text-align: center;
     line-height: 100vh;
     z-index: 1;
-    animation: disparaitre 2s 3s;
+    animation: disparaitre 2s 4s;
     animation-fill-mode:forwards;
       //loader quart de cercle
     .loader-quart{
@@ -29,8 +29,8 @@
           position: absolute;          
           font-family:"Shrikhand";
          inset: -7rem;
-        animation: loader-lettre 1.2s infinite linear;
-         animation-delay: 4s; 
+         animation: loader-lettre 1.2s infinite linear;
+         animation-delay:1s; 
             .l1,.l3,.l5,.l7{color:$violet-foncer;}
             .l2,.l4,.l6,.l8{color: $violet-clair;}                    
        }

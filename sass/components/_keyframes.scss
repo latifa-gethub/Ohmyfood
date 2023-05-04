@@ -1,31 +1,29 @@
+//animation de petit coche qui coulisse****
 @keyframes rotation{
-    0%{
-     transform: rotate(280deg);
+    0%{transform: rotate(280deg);
     }
-    100%{
- transform: rotate(0);
+    100%{transform: rotate(0);
     }
   }
- 
+  //animation sur les plats****** 
   @keyframes ani-scale{
-   0%{
-    transform:translateY(50%);
+   0%{transform:translateY(50%);
     opacity: 0;
    }
-   100%{
-    transform: translateY(0);
+   100%{transform: translateY(0);
     opacity: 1;
    }
  }
+ //animation pour l'icone sur loader
  @keyframes ani-ratation{
     0%{transform: rotate(0);
          }
     100%{transform: rotate(360deg);
    }
   }
+  //animation pour que le loader se disparaitre
   @keyframes disparaitre{
-    to{
-       transform: scale(0);
+    to{transform: scale(0);
     }
   }
   @keyframes loader-lettre{
@@ -36,6 +34,4 @@
      transform: translateY(-15px);
    }
   }
-  @keyframes scale-heart{
-   to{ transform:scale(1.1);
-  }}
+  
